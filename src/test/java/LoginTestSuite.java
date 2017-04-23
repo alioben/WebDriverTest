@@ -42,6 +42,7 @@ public class LoginTestSuite extends TestCase {
 		driver.quit();
 	}
 	
+
 	@Test
 	public void badFormatTest() {
 		// Send bad formatted credentials
@@ -51,8 +52,8 @@ public class LoginTestSuite extends TestCase {
 		
 		// Expect an unsuccessful login
 		WebDriverWait wait = new WebDriverWait(driver, 10); 
-		Alert alert = wait.until(
-				ExpectedConditions.alertIsPresent()
+		WebElement alert = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.id("login-message"))
 		);
 		assertEquals("Incorrect login information.", alert.getText());
 	}
@@ -64,8 +65,8 @@ public class LoginTestSuite extends TestCase {
 		
 		// Expect an unsuccessful login
 		WebDriverWait wait = new WebDriverWait(driver, 10); 
-		Alert alert = wait.until(
-				ExpectedConditions.alertIsPresent()
+		WebElement alert = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.id("login-message"))
 		);
 		assertEquals("Incorrect login information.", alert.getText());
 	}
@@ -79,8 +80,8 @@ public class LoginTestSuite extends TestCase {
 		
 		// Expect an unsuccessful login
 		WebDriverWait wait = new WebDriverWait(driver, 10); 
-		Alert alert = wait.until(
-				ExpectedConditions.alertIsPresent()
+		WebElement alert = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.id("login-message"))
 		);
 		assertEquals("Login unsuccessful, please enter valid credentials!", alert.getText());
 	}
@@ -94,8 +95,8 @@ public class LoginTestSuite extends TestCase {
 		
 		// Expect a successful login
 		WebDriverWait wait = new WebDriverWait(driver, 10); 
-		Alert alert = wait.until(
-				ExpectedConditions.alertIsPresent()
+		WebElement alert = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.id("login-message"))
 		);
 		assertEquals("Login successful!", alert.getText());
 	}

@@ -59,8 +59,8 @@ public class RegisterTestSuite extends TestCase {
 		
 		// Expect a successful registration
 		WebDriverWait wait = new WebDriverWait(driver, 10); 
-		Alert alert = wait.until(
-				ExpectedConditions.alertIsPresent()
+		WebElement alert = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.id("register-message"))
 		);
 		assertEquals("Registration successful!", alert.getText());
 	}
@@ -71,8 +71,8 @@ public class RegisterTestSuite extends TestCase {
 		
 		// Expect an unsuccessful registration
 		WebDriverWait wait = new WebDriverWait(driver, 10); 
-		Alert alert = wait.until(
-				ExpectedConditions.alertIsPresent()
+		WebElement alert = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.id("register-message"))
 		);
 		assertEquals("Incorrect user information.", alert.getText());
 	}
@@ -88,8 +88,8 @@ public class RegisterTestSuite extends TestCase {
 		
 		// Expect an unsuccessful registration
 		WebDriverWait wait = new WebDriverWait(driver, 10); 
-		Alert alert = wait.until(
-				ExpectedConditions.alertIsPresent()
+		WebElement alert = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.id("register-message"))
 		);
 		assertEquals("Incorrect user information.", alert.getText());
 	}
@@ -105,8 +105,8 @@ public class RegisterTestSuite extends TestCase {
 		
 		// Expect an unsuccessful registration
 		WebDriverWait wait = new WebDriverWait(driver, 10); 
-		Alert alert = wait.until(
-				ExpectedConditions.alertIsPresent()
+		WebElement alert = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.id("register-message"))
 		);
 		assertEquals("Incorrect user information.", alert.getText());
 	}
@@ -122,8 +122,8 @@ public class RegisterTestSuite extends TestCase {
 		
 		// Expect an unsuccessful registration
 		WebDriverWait wait = new WebDriverWait(driver, 10); 
-		Alert alert = wait.until(
-				ExpectedConditions.alertIsPresent()
+		WebElement alert = wait.until(
+				ExpectedConditions.visibilityOfElementLocated(By.id("register-message"))
 		);
 		assertEquals("Registration unsuccessful, please enter valid credentials!", alert.getText());
 	}
