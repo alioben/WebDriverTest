@@ -24,11 +24,11 @@ public class LoginTestSuite extends TestCase {
 	
 	public LoginTestSuite() {
 		// Setup geckodriver path
-		System.setProperty("webdriver.gecko.driver", "file:///home/benlalah/Bureau/ba6/AdvSoftwEng/ASE/FrontEnd/index.html");
+		System.setProperty("webdriver.gecko.driver", Utils.getConfig(1));
 
 		// Setup the driver
 		driver = new FirefoxDriver();
-		driver.get("file:///home/benlalah/Bureau/ba6/AdvSoftwEng/ASE/FrontEnd/index.html");
+		driver.get(Utils.getConfig(0));
 
 		// Initialize the form elements to test
 		username = driver.findElement(By.name("login-username"));
