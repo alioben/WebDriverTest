@@ -28,11 +28,11 @@ public class RegisterTestSuite extends TestCase {
 
 	public RegisterTestSuite() {
 		// Setup geckodriver path
-		System.setProperty("webdriver.gecko.driver", Utils.GECKO_DRIVER);
+		System.setProperty("webdriver.gecko.driver", "/home/benlalah/Bureau/ba6/AdvSoftwEng/geckodriver");
 
 		// Setup the driver
 		driver = new FirefoxDriver();
-		driver.get(Utils.URL);
+		driver.get("file:///home/benlalah/Bureau/ba6/AdvSoftwEng/ASE/FrontEnd/index.html");
 
 		// Initialize the form elements to test
 		reg_name = driver.findElement(By.name("register-name"));
