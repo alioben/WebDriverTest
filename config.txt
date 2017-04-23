@@ -1,2 +1,2 @@
 file:///home/benlalah/Bureau/ba6/AdvSoftwEng/ASE/FrontEnd/index.html
-/home/benlalah/Bureau/ba6/AdvSoftwEng/geckodriver
+/home/benlalah/Bureau/ba6/AdvSoftwEng/phantomjs

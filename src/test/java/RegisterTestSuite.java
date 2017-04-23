@@ -28,7 +28,7 @@ public class RegisterTestSuite extends TestCase {
 
 	public RegisterTestSuite() {
 		// Setup geckodriver path
-		System.setProperty("webdriver.gecko.driver", Utils.getConfig(1));
+		System.setProperty("phantomjs.binary.path", Utils.getConfig(1));
 
 		// Setup the driver
 		driver = new FirefoxDriver();
