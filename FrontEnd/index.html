@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <title>PartyList | Your best party playlist.</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body ng-app="PartyList">
+    <div class="login-box" ng-controller="LoginRegisterCtrl">
+        <div id="login-form">
+            <div id="login-message">
+            {{message_login}}
+            </div>
+            <h2>LOGIN FORM</h2>
+            <table>
+                <tr>
+                    <td>Email</td>
+                    <td>
+                        <input type="text" name="login-username" ng-model="LoginObject.email" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td>
+                        <input type="password" name="login-password" ng-model="LoginObject.password" />
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="Submit" name="login-submit" value="Login" ng-click="login()" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="register-box" ng-controller="LoginRegisterCtrl">
+        <div id="registeration-form">
+            <div id="register-message">
+            {{message_register}}
+            </div>
+            <h2>REGISTERING FORM</h2>
+            <table>
+                <tr>
+                    <td>Name</td>
+                    <td>
+                        <input type="text" name="register-name" ng-model="RegisterObject.name" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>
+                        <input type="text" name="register-email" ng-model="RegisterObject.email" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td>
+                        <input type="password" name="register-password" ng-model="RegisterObject.password" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Confirm Password</td>
+                    <td>
+                        <input type="password" name="register-cpassword" ng-model="RegisterObject.confirm_password" />
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="Submit" name="register-submit" value="Register" ng-click="register()" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="clear"></div>
+</body>
+<script src="js/app.js"></script>
+
+</html>
